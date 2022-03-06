@@ -38,3 +38,29 @@
 - [ Next.JS ] Pre rendering
   1. 앱에 있는 페이지가 초기 상태의 Component로 미리 렌더링 된다 (HTML 페이지)
   2. React.js 실행 ( hydration : react.js를 프론트엔드 내부(next.js)에서 실행하는 것 )
+
+<br><br>
+
+## 5. Routing
+- [ Link ] NextJS 애플리케이션에 클라이언트 사이드 네비게이션을 제공
+
+  ```jsx
+  <nav>
+    <Link href="/">
+        <a>Home</a>
+    </Link>
+    <Link href="/about">
+        <a>About</a>
+    </Link>
+  </nav>
+  ```
+- [ Router Hook ] location 정보 활용
+
+  ```jsx
+  import { useRouter } from 'next/router';
+
+  export default function NavBar() {
+    const router = useRouter(); // location info object
+    //...
+  }
+  ```
