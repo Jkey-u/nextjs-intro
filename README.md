@@ -64,3 +64,20 @@
     //...
   }
   ```
+
+<br><br>
+
+## 6. CSS Modules
+- 페이지가 빌드될 때, NextJS가 클래스 이름을 무작위로 바꿈 (클래스이름 충돌 방지)
+- 두개 이상의 클래스이름을 동일한 엘리먼트에 적용하기
+
+```jsx
+  <nav>
+    <Link href="/">
+        <a className={`${styles.link} ${router.pathname === "/" ? styles.active : ""}`}>Home</a>
+    </Link>
+    <Link href="/about">
+        <a className={[ styles.link, router.pathname === "/about" ? styles.active : "", ].join(" ")}>About</a>            
+    </Link>
+  </nav>
+```
