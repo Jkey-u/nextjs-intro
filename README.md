@@ -100,3 +100,21 @@
         }
     `}</style>
   ```
+
+<br><br>
+
+## 8. Custom APP
+- Next.js는 App 컴포넌트를 사용하여 page를 초기화한다. 이를 재정의하고 페이지 초기화를 제어할 수 있다.
+  - 페이지 변경 간에 레이아웃 유지
+  - 페이지 탐색 시 state 유지
+  - componentDidCatch를 사용한 Custom 에러 처리
+  - 페이지에 추가 데이터 삽입
+  - Global CSS 추가<br><br>
+
+- 기본 App을 재정의하려면 아래와 같이 ./pages/_app.js 파일을 만든다.
+
+  ```jsx
+    function App({ Component, pageProps }) {
+      return < Component {...pageProps} />
+    }
+  ```
