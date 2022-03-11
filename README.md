@@ -134,3 +134,14 @@
         )
     }
   ```
+
+<br><br>
+
+## 10. Redirect and Rewrite
+- [ Redirects ]
+  - Redirect을 사용하면 들어오는 request 경로를 다른 destination 경로로 Redirect할 수 있다
+  - redirects은 새 페이지로 reroute되고 URL을 변경한다<br><br>
+
+- [ Rewrites ]
+  - Rewrites를 사용하면 들어오는 request 경로를 다른 destination 경로에 매핑할 수 있다
+  - Rewrites은 URL 프록시 역할을 하고 destination 경로를 mask하여 사용자가 사이트에서 위치를 변경하지 않은 것처럼 보이게 한다 (URL변경되지 않음)
