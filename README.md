@@ -118,3 +118,19 @@
       return < Component {...pageProps} />
     }
   ```
+<br><br>
+
+## 9. Head(next/head)
+- 페이지 head에 엘리먼트를 추가하기 위한 내장 컴포넌트를 노출
+
+  ```jsx
+    import Head from "next/head";
+
+    export default function Seo({ title }) {
+        return (
+            <Head>
+                <title>{title} | Next Movies</title>
+            </Head>
+        )
+    }
+  ```
