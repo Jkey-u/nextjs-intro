@@ -145,3 +145,29 @@
 - [ Rewrites ]
   - Rewrites를 사용하면 들어오는 request 경로를 다른 destination 경로에 매핑할 수 있다
   - Rewrites은 URL 프록시 역할을 하고 destination 경로를 mask하여 사용자가 사이트에서 위치를 변경하지 않은 것처럼 보이게 한다 (URL변경되지 않음)
+
+<br><br>
+
+## 11. Server Side Rendering
+- [ getServerSideProps ] : Server Side를 통해 props를 page로 보냄
+
+  - 페이지에서 getServerSideProps(서버 측 렌더링)라는 함수를 export하는 경우,
+    Next.js는 getServerSideProps에서 반환된 데이터(fetch)를 사용하여 각 request에서 이 페이지를 pre-render한다.
+    
+  - getServerSideProps는 서버 측에서만 실행되며 브라우저에서는 실행되지 않는다<br>
+  
+    ```jsx
+      export default function Page({ data }) {
+        // Render data...
+      }
+
+      // This gets called on every request
+      export async function getServerSideProps() {
+        // Fetch data from external API
+        const res = await fetch(`https://.../data`)
+        const data = await res.json()
+
+        // Pass data to the page via props
+        return { props: { data } }
+      }
+    ```
