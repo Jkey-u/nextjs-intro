@@ -3,7 +3,7 @@ import { useRouter } from 'next/router';
 
 export default function NavBar() {
     const router = useRouter(); //location info object
-    console.log(router);
+    // console.log(router);
     
     return (
         <nav>

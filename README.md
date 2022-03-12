@@ -155,7 +155,7 @@
     Next.js는 getServerSideProps에서 반환된 데이터(fetch)를 사용하여 각 request에서 이 페이지를 pre-render한다.
     
   - getServerSideProps는 서버 측에서만 실행되며 브라우저에서는 실행되지 않는다<br>
-  
+
     ```jsx
       export default function Page({ data }) {
         // Render data...
@@ -171,3 +171,8 @@
         return { props: { data } }
       }
     ```
+<br><br>
+
+## 12. Dynamic Routes
+- Next.js에서는 page에 대괄호를 추가하여 Dynamic Routes를 생성할 수 있다
+- /post/1, /post/abc 등과 같은 모든 경로는 'pages/post/[pid].js' 와 일치한다
