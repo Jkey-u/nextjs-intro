@@ -176,3 +176,19 @@
 ## 12. Dynamic Routes
 - Next.js에서는 page에 대괄호를 추가하여 Dynamic Routes를 생성할 수 있다
 - /post/1, /post/abc 등과 같은 모든 경로는 'pages/post/[pid].js' 와 일치한다
+
+<br><br>
+
+## 13. Detail Page
+- [ router.push( url, as, options ) ]
+
+  - 클라이언트측 전환 처리 (next/link 가 적절하지 않은 경우에 유용)
+  - [ url ] UrlObject | String : 탐색할 URL
+  - [ as ] UrlObject | String : 브라우저 URL 표시줄에 표시될 경로 (URL masking)
+      
+      ```jsx
+        router.push({
+          pathname: '/post/[pid]',
+          query: { pid: post.id },
+        }, '/post/[pid]');
+      ```
